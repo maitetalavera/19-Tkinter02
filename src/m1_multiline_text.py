@@ -5,7 +5,7 @@ import tkinter as tk
 # In this module, all of the _todo_ items will be in one comment because you
 # will be modifying the same block of code as you go.
 #
-# TODO: 1. (1 pt)
+# DONE: 1. (1 pt)
 #
 #   First, create a tkinter window called window.
 #
@@ -15,7 +15,7 @@ import tkinter as tk
 #   Once you have done this, then change the above _TODO_ to DONE.
 #
 #
-# TODO: 2. (2 pts)
+# DONE: 2. (2 pts)
 #
 #   Now, create a multiline text entry box called text_box.
 #
@@ -24,7 +24,7 @@ import tkinter as tk
 #   Once you have done this, then change the above _TODO_ to DONE.
 #
 #
-# TODO: 3. (2 pts)
+# DONE: 3. (2 pts)
 #
 #   Now, use the insert() method to insert text into the multiline text box.
 #   You can choose the text that you insert, but you should insert text on
@@ -33,7 +33,7 @@ import tkinter as tk
 #   Once you have done this, then change the above _TODO_ to DONE.
 #
 #
-# TODO: 4. (2 pts)
+# DONE: 4. (2 pts)
 #
 #   Now, use the get() method to get the text that you inserted. Save that
 #   text to a variable and then print that variable.
@@ -41,10 +41,30 @@ import tkinter as tk
 #   Once you have done this, then change the above _TODO_ to DONE.
 #
 #
-# TODO: 5. (1 pt)
+# DONE: 5. (1 pt)
 #
 #   Now, use the delete() method to delete only the first line of text
 #   (leaving the first line as a blank line).
 #   
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+
+import tkinter as tk
+
+window = tk.Tk()
+
+text_box=tk.Text()
+text_box.pack()
+
+text_box.insert("1.0", "Hello")
+text_box.insert("2.0", "\nWorld")
+text_box.insert(tk.END, "\nPut me at the end!")
+
+text=text_box.get("1.0", tk.END)
+
+text_box.delete("1.0", "1.5")
+
+print(text)
+
+
+window.mainloop()
