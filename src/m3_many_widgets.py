@@ -39,3 +39,39 @@ import tkinter as tk
 #   
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+
+import tkinter as tk
+
+window = tk.Tk()
+
+frm_a=tk.Frame(master=window, relief=tk.GROOVE, borderwidth=5)
+frm_b=tk.Frame(master=window, relief=tk.GROOVE, borderwidth=5)
+
+lbl_a=tk.Label(master=frm_a, text="Frame A", bg="red")
+lbl_a.pack()
+button1 = tk.Button(
+    master=frm_a, 
+    text="Click here!"
+)
+button1.pack()
+entry1=tk.Entry(master=frm_a,)
+entry1.pack()
+
+lbl_b=tk.Label(master=frm_b, text="Frame B", bg="purple")
+lbl_b.pack()
+text_box=tk.Text(master=frm_b)
+text_box.pack()
+
+frm_a.pack()
+frm_b.pack()
+
+border_effects={
+    "flat":tk.FLAT, 
+    "sunken":tk.SUNKEN, 
+    "raised":tk.RAISED,
+    "groove":tk.GROOVE,
+    "ridge":tk.RIDGE
+}
+
+window.mainloop()
+

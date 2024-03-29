@@ -55,8 +55,8 @@ import tkinter as tk
 
 window = tk.Tk()
 
-frm_a=tk.Frame(master=window, relief=tk.GROOVE, borderwidth=5)
-frm_b=tk.Frame()
+frm_a=tk.Frame()
+frm_b=tk.Frame(master=window, relief=tk.GROOVE, borderwidth=5)
 
 lbl_a=tk.Label(master=frm_a, text="Frame A", bg="red")
 lbl_a.pack()
